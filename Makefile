@@ -54,4 +54,11 @@ uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
 
+patch:
+	patch -i patches/st-no_bold_colors-20170623-b331da5.diff
+	patch -i patches/st-solarized-both-20190128-3be4cf1.diff
+	patch -i patches/st-scrollback-20200504-28ad288.diff
+	patch -i patches/st-scrollback-mouse-20191024-a2c479c.diff
+	patch -i patches/st-scrollback-mouse-altscreen-20191024-a2c479c.diff
+
 .PHONY: all options clean dist install uninstall
